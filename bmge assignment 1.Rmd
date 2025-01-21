@@ -349,7 +349,7 @@ plotChromBins(x)
 ##This was done with the help of ChatGPT. The link to the chat is here https://chatgpt.com/share/678f4c33-e664-8005-afa9-54b7746adb34. ChatGPT was used to help me get started on the GenomicRanges and GenomicDistributions package. Following the code suggestion, I looked online for the rowRanges() function for genomic range, and I came across this guide https://www.bioconductor.org/packages/release/workflows/vignettes/annotation/inst/doc/Annotating_Genomic_Ranges.html, which helped me understand the concept behind the code. 
 ```
 
-![Chr1_VariantsvsPos](Chr1_VariantsvsPos.svg)
+![Chr1_VariantsvsPos](assignment1/pipeline/Chr1_VariantsvsPos.svg)
 
 #### c. Interactively viewing our variants in IGV
 You can download the IGV viewer from here: https://software.broadinstitute.org/software/igv/home. IGV is an interactive tool to visualize different data types of genetic information (e.g. bam, bed files). You will install this tool to your **local computer**. To visualize where the reads of our ChIP analysis mapped in the genome. 
