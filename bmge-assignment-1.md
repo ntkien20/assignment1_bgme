@@ -351,8 +351,8 @@ and consistent N content across all positions, suggesting good quality
 
 ![Per Base sequence
 content](/Users/ntkien20/Desktop/BMEG/assignment1_bgme/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_base_sequence_content.png)
-This graph shows the proportion of each of the four nucleotide (A, T, G,
-C) in the read. The sequencing content is uniform across all read.
+This graph shows us the proportion of each of the four nucleotide (A, T,
+G, C) in the read. The sequencing content is uniform across all read.
 
 ## Per sequence gc content
 

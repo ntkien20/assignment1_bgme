@@ -1,0 +1,936 @@
+{
+  "build": "py39h941272d_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/osx-arm64",
+  "constrains": [
+    "libprotobuf 5.28.3"
+  ],
+  "depends": [
+    "__osx >=11.0",
+    "libcxx >=18",
+    "python >=3.9,<3.10.0a0",
+    "python >=3.9,<3.10.0a0 *_cpython",
+    "python_abi 3.9.* *_cp39"
+  ],
+  "extracted_package_dir": "/opt/anaconda3/pkgs/protobuf-5.28.3-py39h941272d_0",
+  "files": [
+    "lib/python3.9/site-packages/google/_upb/_message.cpython-39-darwin.so",
+    "lib/python3.9/site-packages/google/protobuf/__init__.py",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/any_pb2.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/api_pb2.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/descriptor.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/descriptor_database.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/descriptor_pb2.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/descriptor_pool.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/duration_pb2.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/empty_pb2.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/field_mask_pb2.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/json_format.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/message.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/message_factory.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/proto.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/proto_builder.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/proto_json.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/reflection.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/runtime_version.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/service.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/service_reflection.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/source_context_pb2.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/struct_pb2.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/symbol_database.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/text_encoding.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/text_format.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/timestamp_pb2.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/type_pb2.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/unknown_fields.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/__pycache__/wrappers_pb2.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/any_pb2.py",
+    "lib/python3.9/site-packages/google/protobuf/api_pb2.py",
+    "lib/python3.9/site-packages/google/protobuf/compiler/__init__.py",
+    "lib/python3.9/site-packages/google/protobuf/compiler/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/compiler/__pycache__/plugin_pb2.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/compiler/plugin_pb2.py",
+    "lib/python3.9/site-packages/google/protobuf/descriptor.py",
+    "lib/python3.9/site-packages/google/protobuf/descriptor_database.py",
+    "lib/python3.9/site-packages/google/protobuf/descriptor_pb2.py",
+    "lib/python3.9/site-packages/google/protobuf/descriptor_pool.py",
+    "lib/python3.9/site-packages/google/protobuf/duration_pb2.py",
+    "lib/python3.9/site-packages/google/protobuf/empty_pb2.py",
+    "lib/python3.9/site-packages/google/protobuf/field_mask_pb2.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/__init__.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/_parameterized.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/api_implementation.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/builder.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/containers.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/decoder.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/encoder.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/enum_type_wrapper.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/extension_dict.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/field_mask.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/message_listener.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/python_edition_defaults.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/python_message.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/testing_refleaks.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/type_checkers.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/well_known_types.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/wire_format.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/internal/_parameterized.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/api_implementation.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/builder.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/containers.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/decoder.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/encoder.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/enum_type_wrapper.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/extension_dict.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/field_mask.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/message_listener.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/python_edition_defaults.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/python_message.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/testing_refleaks.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/type_checkers.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/well_known_types.py",
+    "lib/python3.9/site-packages/google/protobuf/internal/wire_format.py",
+    "lib/python3.9/site-packages/google/protobuf/json_format.py",
+    "lib/python3.9/site-packages/google/protobuf/message.py",
+    "lib/python3.9/site-packages/google/protobuf/message_factory.py",
+    "lib/python3.9/site-packages/google/protobuf/proto.py",
+    "lib/python3.9/site-packages/google/protobuf/proto_builder.py",
+    "lib/python3.9/site-packages/google/protobuf/proto_json.py",
+    "lib/python3.9/site-packages/google/protobuf/pyext/__init__.py",
+    "lib/python3.9/site-packages/google/protobuf/pyext/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/pyext/__pycache__/cpp_message.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/pyext/cpp_message.py",
+    "lib/python3.9/site-packages/google/protobuf/reflection.py",
+    "lib/python3.9/site-packages/google/protobuf/runtime_version.py",
+    "lib/python3.9/site-packages/google/protobuf/service.py",
+    "lib/python3.9/site-packages/google/protobuf/service_reflection.py",
+    "lib/python3.9/site-packages/google/protobuf/source_context_pb2.py",
+    "lib/python3.9/site-packages/google/protobuf/struct_pb2.py",
+    "lib/python3.9/site-packages/google/protobuf/symbol_database.py",
+    "lib/python3.9/site-packages/google/protobuf/testdata/__init__.py",
+    "lib/python3.9/site-packages/google/protobuf/testdata/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/text_encoding.py",
+    "lib/python3.9/site-packages/google/protobuf/text_format.py",
+    "lib/python3.9/site-packages/google/protobuf/timestamp_pb2.py",
+    "lib/python3.9/site-packages/google/protobuf/type_pb2.py",
+    "lib/python3.9/site-packages/google/protobuf/unknown_fields.py",
+    "lib/python3.9/site-packages/google/protobuf/util/__init__.py",
+    "lib/python3.9/site-packages/google/protobuf/util/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/google/protobuf/wrappers_pb2.py",
+    "lib/python3.9/site-packages/protobuf-5.28.3.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/protobuf-5.28.3.dist-info/LICENSE",
+    "lib/python3.9/site-packages/protobuf-5.28.3.dist-info/METADATA",
+    "lib/python3.9/site-packages/protobuf-5.28.3.dist-info/RECORD",
+    "lib/python3.9/site-packages/protobuf-5.28.3.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/protobuf-5.28.3.dist-info/WHEEL",
+    "lib/python3.9/site-packages/protobuf-5.28.3.dist-info/direct_url.json"
+  ],
+  "fn": "protobuf-5.28.3-py39h941272d_0.conda",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/opt/anaconda3/pkgs/protobuf-5.28.3-py39h941272d_0",
+    "type": 1
+  },
+  "md5": "8890eb403b3fcb007ba97bc8b7a4a1de",
+  "name": "protobuf",
+  "package_tarball_full_path": "/opt/anaconda3/pkgs/protobuf-5.28.3-py39h941272d_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.9/site-packages/google/_upb/_message.cpython-39-darwin.so",
+        "path_type": "hardlink",
+        "sha256": "f66a7b16137346d3bf6444d74ae04b326718311343e209346b2fb3f91c0af7f8",
+        "sha256_in_prefix": "f66a7b16137346d3bf6444d74ae04b326718311343e209346b2fb3f91c0af7f8",
+        "size_in_bytes": 381312
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "0d2fe5e532a35a7a7f3b447125d00bfbfa555112ce8ca20c3fd909bd5c85ea6b",
+        "sha256_in_prefix": "0d2fe5e532a35a7a7f3b447125d00bfbfa555112ce8ca20c3fd909bd5c85ea6b",
+        "size_in_bytes": 346
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "7ff18d869ad762cd2d204e367c39cbb1c35be4218b3829f285b0a4554a567fc8",
+        "sha256_in_prefix": "7ff18d869ad762cd2d204e367c39cbb1c35be4218b3829f285b0a4554a567fc8",
+        "size_in_bytes": 168
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/any_pb2.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "cd65c07324fe08befcfdc45038407e30e78a8353192ff10be087221739f6b680",
+        "sha256_in_prefix": "cd65c07324fe08befcfdc45038407e30e78a8353192ff10be087221739f6b680",
+        "size_in_bytes": 1370
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/api_pb2.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "e0e51fdfa4ee9530330360eb78a6a095c9e950ba2a8418d8332d662937015e6c",
+        "sha256_in_prefix": "e0e51fdfa4ee9530330360eb78a6a095c9e950ba2a8418d8332d662937015e6c",
+        "size_in_bytes": 2300
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/descriptor.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "114e260a2dca0ab38d20058fdfe2d5f80d378b17bf1d5aca44f915c4b50b3eba",
+        "sha256_in_prefix": "114e260a2dca0ab38d20058fdfe2d5f80d378b17bf1d5aca44f915c4b50b3eba",
+        "size_in_bytes": 42512
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/descriptor_database.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "83648c0c170dc9ededdf87aad798d72a5f2f11861107e82e020aa60a42db1e00",
+        "sha256_in_prefix": "83648c0c170dc9ededdf87aad798d72a5f2f11861107e82e020aa60a42db1e00",
+        "size_in_bytes": 4958
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/descriptor_pb2.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "b2ba114ce51c63b7b1ef7cee61268aa962f3d9f196cfd727328dd884c07d2fee",
+        "sha256_in_prefix": "b2ba114ce51c63b7b1ef7cee61268aa962f3d9f196cfd727328dd884c07d2fee",
+        "size_in_bytes": 78354
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/descriptor_pool.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "53e21a76ac1dff4b4abb7f97ba9503ae076d478e03490de22e0bf3c133cd7eda",
+        "sha256_in_prefix": "53e21a76ac1dff4b4abb7f97ba9503ae076d478e03490de22e0bf3c133cd7eda",
+        "size_in_bytes": 35878
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/duration_pb2.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "79640443732fadb21a277bff347c18c9ddc57914577e32ac2beb412e3293ec36",
+        "sha256_in_prefix": "79640443732fadb21a277bff347c18c9ddc57914577e32ac2beb412e3293ec36",
+        "size_in_bytes": 1426
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/empty_pb2.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "3db0fbf8f892e7ebf1a839e116974eb55f40341bc3b79b53eb11320c5bad013a",
+        "sha256_in_prefix": "3db0fbf8f892e7ebf1a839e116974eb55f40341bc3b79b53eb11320c5bad013a",
+        "size_in_bytes": 1347
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/field_mask_pb2.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "0ae0b16ad8cd89b1988c0458e968bdde87d29a117746739d677e5684fa256c2e",
+        "sha256_in_prefix": "0ae0b16ad8cd89b1988c0458e968bdde87d29a117746739d677e5684fa256c2e",
+        "size_in_bytes": 1414
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/json_format.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "ec71ffd69c65f86e21990b7594664a00da9605d5e4e901d2eea90c84abb7a3cc",
+        "sha256_in_prefix": "ec71ffd69c65f86e21990b7594664a00da9605d5e4e901d2eea90c84abb7a3cc",
+        "size_in_bytes": 27092
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/message.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "c0d41ea51ad5e15e596bc9d0a043ef33ebe93f40d203206cc324cf9157fdbe86",
+        "sha256_in_prefix": "c0d41ea51ad5e15e596bc9d0a043ef33ebe93f40d203206cc324cf9157fdbe86",
+        "size_in_bytes": 14156
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/message_factory.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "a77776582a7ac8b737f2acab0abe7765d7e15340fa02b5023f4df57d643e4715",
+        "sha256_in_prefix": "a77776582a7ac8b737f2acab0abe7765d7e15340fa02b5023f4df57d643e4715",
+        "size_in_bytes": 6772
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/proto.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "aac6366dea2779422cdaf421337c394fe23a0cfc3471cf0b3b306ba338bf0598",
+        "sha256_in_prefix": "aac6366dea2779422cdaf421337c394fe23a0cfc3471cf0b3b306ba338bf0598",
+        "size_in_bytes": 3329
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/proto_builder.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "300a3c983ae2a24e08bbaf86dcf013e88f4dea6abe3b6313f86efaa71fc8f476",
+        "sha256_in_prefix": "300a3c983ae2a24e08bbaf86dcf013e88f4dea6abe3b6313f86efaa71fc8f476",
+        "size_in_bytes": 2888
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/proto_json.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "b4fc95ce721051f726ca7d90fd98123538d6247b1b1589729e2b8a1391eab6b2",
+        "sha256_in_prefix": "b4fc95ce721051f726ca7d90fd98123538d6247b1b1589729e2b8a1391eab6b2",
+        "size_in_bytes": 2761
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/reflection.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "0c9646e49f17c4e12ccec7e46059e4d2aee1d05064ea19c99503382bcdbb69b3",
+        "sha256_in_prefix": "0c9646e49f17c4e12ccec7e46059e4d2aee1d05064ea19c99503382bcdbb69b3",
+        "size_in_bytes": 2357
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/runtime_version.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "68a729900210900b554523bca0902b0093000304745fa22f224ed972d838745a",
+        "sha256_in_prefix": "68a729900210900b554523bca0902b0093000304745fa22f224ed972d838745a",
+        "size_in_bytes": 3286
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/service.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "319cf19694ba7b01badad3002d8b1d37d9260ec83768e1472a46d3c195627a6d",
+        "sha256_in_prefix": "319cf19694ba7b01badad3002d8b1d37d9260ec83768e1472a46d3c195627a6d",
+        "size_in_bytes": 9095
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/service_reflection.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "d7a31afe8c4d67c7106b1329a29ed6d563ba64cc9dd16e35f371454ba4406d23",
+        "sha256_in_prefix": "d7a31afe8c4d67c7106b1329a29ed6d563ba64cc9dd16e35f371454ba4406d23",
+        "size_in_bytes": 10441
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/source_context_pb2.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "405773de7ce326cc3248f0e6202f5f0a24a8ef71ab71472f762b117d93a0df36",
+        "sha256_in_prefix": "405773de7ce326cc3248f0e6202f5f0a24a8ef71ab71472f762b117d93a0df36",
+        "size_in_bytes": 1455
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/struct_pb2.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "e9bd77c10b17b488cb2f4f42969b36fbd53a3c7f4b9e8e495d943999fefa8eca",
+        "sha256_in_prefix": "e9bd77c10b17b488cb2f4f42969b36fbd53a3c7f4b9e8e495d943999fefa8eca",
+        "size_in_bytes": 2118
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/symbol_database.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "a84e7e8c78e0fe66176ca14f87e51b1c14f2f23d7e566008c4b08530a801d570",
+        "sha256_in_prefix": "a84e7e8c78e0fe66176ca14f87e51b1c14f2f23d7e566008c4b08530a801d570",
+        "size_in_bytes": 7016
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/text_encoding.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "a0cd94a000517507b756ec519096048892d067f711515bf3c8fe820789e790ff",
+        "sha256_in_prefix": "a0cd94a000517507b756ec519096048892d067f711515bf3c8fe820789e790ff",
+        "size_in_bytes": 2854
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/text_format.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "58ffe433accb294b17a5b6bafa4f723e220f342a5f18c0a4fff373d5a18828cd",
+        "sha256_in_prefix": "58ffe433accb294b17a5b6bafa4f723e220f342a5f18c0a4fff373d5a18828cd",
+        "size_in_bytes": 48211
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/timestamp_pb2.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "ee4f76e2b93195d1616b4a96a2ea6d896d0c2eac408715fa6866eaf7e4f6fe1f",
+        "sha256_in_prefix": "ee4f76e2b93195d1616b4a96a2ea6d896d0c2eac408715fa6866eaf7e4f6fe1f",
+        "size_in_bytes": 1436
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/type_pb2.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "430db410339001baef40589a3306731fb88d4d208dddb07859b0ce493e4b9a8d",
+        "sha256_in_prefix": "430db410339001baef40589a3306731fb88d4d208dddb07859b0ce493e4b9a8d",
+        "size_in_bytes": 3514
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/unknown_fields.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "ffa52dea83c4ec3039294d87e5a581c7b7c612dc4349b47beda3546350e6c7fb",
+        "sha256_in_prefix": "ffa52dea83c4ec3039294d87e5a581c7b7c612dc4349b47beda3546350e6c7fb",
+        "size_in_bytes": 3063
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/__pycache__/wrappers_pb2.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "fe607d278c92ef89cc88ddbfe986ca68739631cf869947e71a6c05de9cf7aa2c",
+        "sha256_in_prefix": "fe607d278c92ef89cc88ddbfe986ca68739631cf869947e71a6c05de9cf7aa2c",
+        "size_in_bytes": 2076
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/any_pb2.py",
+        "path_type": "hardlink",
+        "sha256": "aaf51fde3cc33b62e4d6757a8d5609a2117f88be720bd74f0b09d0de5e60aaaa",
+        "sha256_in_prefix": "aaf51fde3cc33b62e4d6757a8d5609a2117f88be720bd74f0b09d0de5e60aaaa",
+        "size_in_bytes": 1725
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/api_pb2.py",
+        "path_type": "hardlink",
+        "sha256": "cce49cdf22c1faa3490ec5c7163afdb269a99b50cba7327736960bb542fb359d",
+        "sha256_in_prefix": "cce49cdf22c1faa3490ec5c7163afdb269a99b50cba7327736960bb542fb359d",
+        "size_in_bytes": 3145
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/compiler/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/compiler/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "1cfa4ccda9fcce02dc7517957dd878f4cf72c9e1df0cdd5c7cb632878899d526",
+        "sha256_in_prefix": "1cfa4ccda9fcce02dc7517957dd878f4cf72c9e1df0cdd5c7cb632878899d526",
+        "size_in_bytes": 155
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/compiler/__pycache__/plugin_pb2.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "e89e5881c64490843b62cdd9afe8fd29ed49f0c20999da6134e9ed2a20ab41fb",
+        "sha256_in_prefix": "e89e5881c64490843b62cdd9afe8fd29ed49f0c20999da6134e9ed2a20ab41fb",
+        "size_in_bytes": 2671
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/compiler/plugin_pb2.py",
+        "path_type": "hardlink",
+        "sha256": "5f1a9c6ed2ef9fc9b0db56c8d946c5ba4e0550e5917e8abb24577b1d9d7658e9",
+        "sha256_in_prefix": "5f1a9c6ed2ef9fc9b0db56c8d946c5ba4e0550e5917e8abb24577b1d9d7658e9",
+        "size_in_bytes": 3797
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/descriptor.py",
+        "path_type": "hardlink",
+        "sha256": "c4cf4b6894096f2b747f131d27065d4b3092f2d64ae0bbc7c3961dd85f4a80a5",
+        "sha256_in_prefix": "c4cf4b6894096f2b747f131d27065d4b3092f2d64ae0bbc7c3961dd85f4a80a5",
+        "size_in_bytes": 52253
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/descriptor_database.py",
+        "path_type": "hardlink",
+        "sha256": "183892bbebc164167e2f5607417493b1bb09311358fb6d2271bea98f7111f04f",
+        "sha256_in_prefix": "183892bbebc164167e2f5607417493b1bb09311358fb6d2271bea98f7111f04f",
+        "size_in_bytes": 5444
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/descriptor_pb2.py",
+        "path_type": "hardlink",
+        "sha256": "b4e360c17b5d73d4526912aa32954365ddcd839f74e7aab4bd97c5598594b556",
+        "sha256_in_prefix": "b4e360c17b5d73d4526912aa32954365ddcd839f74e7aab4bd97c5598594b556",
+        "size_in_bytes": 343107
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/descriptor_pool.py",
+        "path_type": "hardlink",
+        "sha256": "0c0e574effa3991089d4ee1bfd8b3083ddcace6169cda58e3e87d11b38577816",
+        "sha256_in_prefix": "0c0e574effa3991089d4ee1bfd8b3083ddcace6169cda58e3e87d11b38577816",
+        "size_in_bytes": 48430
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/duration_pb2.py",
+        "path_type": "hardlink",
+        "sha256": "f4ca12a0b864c022848189409ffd6f7b1af4e256b5049c110099083c0d4e9b54",
+        "sha256_in_prefix": "f4ca12a0b864c022848189409ffd6f7b1af4e256b5049c110099083c0d4e9b54",
+        "size_in_bytes": 1805
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/empty_pb2.py",
+        "path_type": "hardlink",
+        "sha256": "a8d2d91c55122917172e4de97b5a0049ce56b1e1b8b3c0f668efc2ed4e6b38a4",
+        "sha256_in_prefix": "a8d2d91c55122917172e4de97b5a0049ce56b1e1b8b3c0f668efc2ed4e6b38a4",
+        "size_in_bytes": 1669
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/field_mask_pb2.py",
+        "path_type": "hardlink",
+        "sha256": "82e6076966570c24b7cc0200032564f17e4ca08116fb0117f18cbe84484cd2fe",
+        "sha256_in_prefix": "82e6076966570c24b7cc0200032564f17e4ca08116fb0117f18cbe84484cd2fe",
+        "size_in_bytes": 1765
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "f1dfe4d64b0d588baa3c310412d3a3802dd7c7c9005c3dbed3847b9b126549bb",
+        "sha256_in_prefix": "f1dfe4d64b0d588baa3c310412d3a3802dd7c7c9005c3dbed3847b9b126549bb",
+        "size_in_bytes": 272
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "0351127ef2f589419d3237a3eef9e02a789f661b75467fe0af0ad0a90aab0dbf",
+        "sha256_in_prefix": "0351127ef2f589419d3237a3eef9e02a789f661b75467fe0af0ad0a90aab0dbf",
+        "size_in_bytes": 155
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/_parameterized.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "f289a8574338759cac168320d6f7ba582859b25dcf68f7bb91aa0620203ab803",
+        "sha256_in_prefix": "f289a8574338759cac168320d6f7ba582859b25dcf68f7bb91aa0620203ab803",
+        "size_in_bytes": 13787
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/api_implementation.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "2e4a326bf5e23d6a1b343bfafd2db8b3c532fefe3bf7915be851bbcae725a1b4",
+        "sha256_in_prefix": "2e4a326bf5e23d6a1b343bfafd2db8b3c532fefe3bf7915be851bbcae725a1b4",
+        "size_in_bytes": 2490
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/builder.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "38ac528cd980dde5492949c3b51eaea0d6ad08dcffc03f5483ff82d2e6021b13",
+        "sha256_in_prefix": "38ac528cd980dde5492949c3b51eaea0d6ad08dcffc03f5483ff82d2e6021b13",
+        "size_in_bytes": 3473
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/containers.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "dacb4022da56efc42749d76dccbb56578f73be86af5f83f05655af0473a4f512",
+        "sha256_in_prefix": "dacb4022da56efc42749d76dccbb56578f73be86af5f83f05655af0473a4f512",
+        "size_in_bytes": 22424
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/decoder.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "cb0080ebaaea19d642766a93c5c49f87295e943097c725e508307053d6e6fd56",
+        "sha256_in_prefix": "cb0080ebaaea19d642766a93c5c49f87295e943097c725e508307053d6e6fd56",
+        "size_in_bytes": 24850
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/encoder.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "f9bf03a96132e8bd7297fa4541c85a06dd5499aaa2ce0497e70c3f667aabc7f0",
+        "sha256_in_prefix": "f9bf03a96132e8bd7297fa4541c85a06dd5499aaa2ce0497e70c3f667aabc7f0",
+        "size_in_bytes": 23066
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/enum_type_wrapper.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "6bfa672bd3687ee379941446bb0120a1849440f7f74a0801c4cbe9695697539b",
+        "sha256_in_prefix": "6bfa672bd3687ee379941446bb0120a1849440f7f74a0801c4cbe9695697539b",
+        "size_in_bytes": 3743
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/extension_dict.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "a0558053768433d13850664a9fdbaa5e6df1358f327e3d11e4ea8f8808aee561",
+        "sha256_in_prefix": "a0558053768433d13850664a9fdbaa5e6df1358f327e3d11e4ea8f8808aee561",
+        "size_in_bytes": 5638
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/field_mask.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "bb5e115fc8d02fb98f98b891e98e28ab560f7b32fb042cb2eafb228fa35c2ec2",
+        "sha256_in_prefix": "bb5e115fc8d02fb98f98b891e98e28ab560f7b32fb042cb2eafb228fa35c2ec2",
+        "size_in_bytes": 9556
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/message_listener.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "bdf9437b4d8295e7a5b94dc7d9fa9d6b75d59efbecd96d2624f457b7192fca57",
+        "sha256_in_prefix": "bdf9437b4d8295e7a5b94dc7d9fa9d6b75d59efbecd96d2624f457b7192fca57",
+        "size_in_bytes": 2319
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/python_edition_defaults.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "dca1f576ce28efda52b2a3c68355cd674d904290b9a17487aa9dc4aa68141e98",
+        "sha256_in_prefix": "dca1f576ce28efda52b2a3c68355cd674d904290b9a17487aa9dc4aa68141e98",
+        "size_in_bytes": 462
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/python_message.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "cab89401ddc69a42ef85f9932b5a497edabcf0ba02c3c60aa646a24223bba6ba",
+        "sha256_in_prefix": "cab89401ddc69a42ef85f9932b5a497edabcf0ba02c3c60aa646a24223bba6ba",
+        "size_in_bytes": 42277
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/testing_refleaks.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "758be257bcb2d9a3454462d340e0ca0272d70306dae694301abf045924d77836",
+        "sha256_in_prefix": "758be257bcb2d9a3454462d340e0ca0272d70306dae694301abf045924d77836",
+        "size_in_bytes": 3491
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/type_checkers.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "1b08f3aa76b60e0e4c5475fe6f6125ed9e8d8988a06328b64f976e3f623a9d86",
+        "sha256_in_prefix": "1b08f3aa76b60e0e4c5475fe6f6125ed9e8d8988a06328b64f976e3f623a9d86",
+        "size_in_bytes": 11194
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/well_known_types.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "76d76a483fe95fbd66b55e422005a5dc7f39f535d2c71ceb5ba10da98fd01f98",
+        "sha256_in_prefix": "76d76a483fe95fbd66b55e422005a5dc7f39f535d2c71ceb5ba10da98fd01f98",
+        "size_in_bytes": 21068
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/__pycache__/wire_format.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "b5244987fb0c0f725cd547b37e92a2811798fd402ab1020c9e3a2ba19d9570f7",
+        "sha256_in_prefix": "b5244987fb0c0f725cd547b37e92a2811798fd402ab1020c9e3a2ba19d9570f7",
+        "size_in_bytes": 6380
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/_parameterized.py",
+        "path_type": "hardlink",
+        "sha256": "fcb2c81f692652b2358597d494817c3817016db4178119e6dfdb81f53a736875",
+        "sha256_in_prefix": "fcb2c81f692652b2358597d494817c3817016db4178119e6dfdb81f53a736875",
+        "size_in_bytes": 14073
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/api_implementation.py",
+        "path_type": "hardlink",
+        "sha256": "427abd2fdb610af81dc658671ac68dad20955e632aff0099efea2844d2d5b73b",
+        "sha256_in_prefix": "427abd2fdb610af81dc658671ac68dad20955e632aff0099efea2844d2d5b73b",
+        "size_in_bytes": 4787
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/builder.py",
+        "path_type": "hardlink",
+        "sha256": "daf7921abaf55a984204e184df035729b54f064635f8b9520ac28e407d8db9d9",
+        "sha256_in_prefix": "daf7921abaf55a984204e184df035729b54f064635f8b9520ac28e407d8db9d9",
+        "size_in_bytes": 4015
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/containers.py",
+        "path_type": "hardlink",
+        "sha256": "090d11e7861d7417f6b969c3a8c52769ebebefd05d05bd5f60cdf7aac9d84b16",
+        "sha256_in_prefix": "090d11e7861d7417f6b969c3a8c52769ebebefd05d05bd5f60cdf7aac9d84b16",
+        "size_in_bytes": 21722
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/decoder.py",
+        "path_type": "hardlink",
+        "sha256": "ee70df8f21ddebba70932e213723bf8192a6d0882088090717621f5253bf80c6",
+        "sha256_in_prefix": "ee70df8f21ddebba70932e213723bf8192a6d0882088090717621f5253bf80c6",
+        "size_in_bytes": 36727
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/encoder.py",
+        "path_type": "hardlink",
+        "sha256": "56e8e9ddb535d1d2c16ac52745a199283f994cbabbcc4180f302a1ee654b47e8",
+        "sha256_in_prefix": "56e8e9ddb535d1d2c16ac52745a199283f994cbabbcc4180f302a1ee654b47e8",
+        "size_in_bytes": 27297
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/enum_type_wrapper.py",
+        "path_type": "hardlink",
+        "sha256": "3cd84af3b6bf34fd4921f147b981626e913884774761ac17c2a671304b6fb2fa",
+        "sha256_in_prefix": "3cd84af3b6bf34fd4921f147b981626e913884774761ac17c2a671304b6fb2fa",
+        "size_in_bytes": 3747
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/extension_dict.py",
+        "path_type": "hardlink",
+        "sha256": "edb4fee62a9afeac38c2493740db423f31a57cf53687d143c9ce538c5db0893a",
+        "sha256_in_prefix": "edb4fee62a9afeac38c2493740db423f31a57cf53687d143c9ce538c5db0893a",
+        "size_in_bytes": 7225
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/field_mask.py",
+        "path_type": "hardlink",
+        "sha256": "124d9e0d4f266354a18fe576c1198e8205ee9a606ffdbadb2f75ce115151e9cd",
+        "sha256_in_prefix": "124d9e0d4f266354a18fe576c1198e8205ee9a606ffdbadb2f75ce115151e9cd",
+        "size_in_bytes": 10416
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/message_listener.py",
+        "path_type": "hardlink",
+        "sha256": "ba1f2f894fccbd67437b82a5d780aba26295140cc130f94ccc5678bdec3f5097",
+        "sha256_in_prefix": "ba1f2f894fccbd67437b82a5d780aba26295140cc130f94ccc5678bdec3f5097",
+        "size_in_bytes": 2008
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/python_edition_defaults.py",
+        "path_type": "hardlink",
+        "sha256": "ef6aee021c8cdd612213c236f59259211a7f74e2c9a19b810de75e70e016eda4",
+        "sha256_in_prefix": "ef6aee021c8cdd612213c236f59259211a7f74e2c9a19b810de75e70e016eda4",
+        "size_in_bytes": 434
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/python_message.py",
+        "path_type": "hardlink",
+        "sha256": "64d4282b9709e996f5e3effba780ea7048974ce1595140066f0338e51486b5eb",
+        "sha256_in_prefix": "64d4282b9709e996f5e3effba780ea7048974ce1595140066f0338e51486b5eb",
+        "size_in_bytes": 57997
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/testing_refleaks.py",
+        "path_type": "hardlink",
+        "sha256": "3e9f9ef22b19bfe2306433b33da2e8f56ba35178ff5e084dadb57eac7b30bcbe",
+        "sha256_in_prefix": "3e9f9ef22b19bfe2306433b33da2e8f56ba35178ff5e084dadb57eac7b30bcbe",
+        "size_in_bytes": 4080
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/type_checkers.py",
+        "path_type": "hardlink",
+        "sha256": "d56ee4f657f279630bd87978eb5c46b0a08526237adee2814fabf220a2b3f60a",
+        "sha256_in_prefix": "d56ee4f657f279630bd87978eb5c46b0a08526237adee2814fabf220a2b3f60a",
+        "size_in_bytes": 15471
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/well_known_types.py",
+        "path_type": "hardlink",
+        "sha256": "14c28e11664b9cb8d915e282a79a31be94fae2270b632fdee2807446f08bcd8f",
+        "sha256_in_prefix": "14c28e11664b9cb8d915e282a79a31be94fae2270b632fdee2807446f08bcd8f",
+        "size_in_bytes": 22705
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/internal/wire_format.py",
+        "path_type": "hardlink",
+        "sha256": "11b01765d6f6de208e6c267136068cc7cf95445d948e0c8fac1093b55d74471f",
+        "sha256_in_prefix": "11b01765d6f6de208e6c267136068cc7cf95445d948e0c8fac1093b55d74471f",
+        "size_in_bytes": 7087
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/json_format.py",
+        "path_type": "hardlink",
+        "sha256": "77edbb25d0b4bc0ffe035577c93b91a91ef47b8c6e5d41f2de76c95acfa82dcf",
+        "sha256_in_prefix": "77edbb25d0b4bc0ffe035577c93b91a91ef47b8c6e5d41f2de76c95acfa82dcf",
+        "size_in_bytes": 37260
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/message.py",
+        "path_type": "hardlink",
+        "sha256": "bac73a99ae6d511eba95efd70c50ba71eed5457dd5bd096b4450af8ec87123e9",
+        "sha256_in_prefix": "bac73a99ae6d511eba95efd70c50ba71eed5457dd5bd096b4450af8ec87123e9",
+        "size_in_bytes": 14042
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/message_factory.py",
+        "path_type": "hardlink",
+        "sha256": "86c306302e812778a4e6f8c619e206e7b58b22701fd55b7c1b5e76f17281a6b7",
+        "sha256_in_prefix": "86c306302e812778a4e6f8c619e206e7b58b22701fd55b7c1b5e76f17281a6b7",
+        "size_in_bytes": 8262
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/proto.py",
+        "path_type": "hardlink",
+        "sha256": "47ebc0b9a7572603e1582794f671ce40f980942bc0827907227cbb0f3924c97a",
+        "sha256_in_prefix": "47ebc0b9a7572603e1582794f671ce40f980942bc0827907227cbb0f3924c97a",
+        "size_in_bytes": 3500
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/proto_builder.py",
+        "path_type": "hardlink",
+        "sha256": "a465362ffa4f11893295992bbc7302507d8f156bdcf7023e6b0c13ec5e62ef8d",
+        "sha256_in_prefix": "a465362ffa4f11893295992bbc7302507d8f156bdcf7023e6b0c13ec5e62ef8d",
+        "size_in_bytes": 4203
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/proto_json.py",
+        "path_type": "hardlink",
+        "sha256": "7d4cb455be26ffcdf5fa869b9fb25bce6ca2a5ca09a505ad05d8133288fc629e",
+        "sha256_in_prefix": "7d4cb455be26ffcdf5fa869b9fb25bce6ca2a5ca09a505ad05d8133288fc629e",
+        "size_in_bytes": 3094
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/pyext/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/pyext/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "b65f75827d343dbfe88d945e5b12c63e22f62b52a6646d2f3c29b8ad6878f53d",
+        "sha256_in_prefix": "b65f75827d343dbfe88d945e5b12c63e22f62b52a6646d2f3c29b8ad6878f53d",
+        "size_in_bytes": 152
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/pyext/__pycache__/cpp_message.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "6ff661dfe3d8933c6e0266458c0441b9043a605870e11fe742a34be70052e889",
+        "sha256_in_prefix": "6ff661dfe3d8933c6e0266458c0441b9043a605870e11fe742a34be70052e889",
+        "size_in_bytes": 1531
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/pyext/cpp_message.py",
+        "path_type": "hardlink",
+        "sha256": "b51597cedb54f4cfcc9bc8af4e6c69d5621a02683bf264ae891e0ec37aefe59c",
+        "sha256_in_prefix": "b51597cedb54f4cfcc9bc8af4e6c69d5621a02683bf264ae891e0ec37aefe59c",
+        "size_in_bytes": 1704
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/reflection.py",
+        "path_type": "hardlink",
+        "sha256": "682e1bddf716af4ad88bd0c0936f5d5f7f965b4431ad150e12bcd43b2c318ec8",
+        "sha256_in_prefix": "682e1bddf716af4ad88bd0c0936f5d5f7f965b4431ad150e12bcd43b2c318ec8",
+        "size_in_bytes": 2893
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/runtime_version.py",
+        "path_type": "hardlink",
+        "sha256": "54ac318ba98b2ce8f04f2f6b4ad283021cc2bd9241389c19258a3b339732a21c",
+        "sha256_in_prefix": "54ac318ba98b2ce8f04f2f6b4ad283021cc2bd9241389c19258a3b339732a21c",
+        "size_in_bytes": 3726
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/service.py",
+        "path_type": "hardlink",
+        "sha256": "06408ce0071f973d3830d56d16c3de315528ffa0c311122aec397b837d1518ed",
+        "sha256_in_prefix": "06408ce0071f973d3830d56d16c3de315528ffa0c311122aec397b837d1518ed",
+        "size_in_bytes": 8059
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/service_reflection.py",
+        "path_type": "hardlink",
+        "sha256": "5871251a73e0cb00ed9f75fcc4a54db1964e0a024e4f38290324ddfab9822865",
+        "sha256_in_prefix": "5871251a73e0cb00ed9f75fcc4a54db1964e0a024e4f38290324ddfab9822865",
+        "size_in_bytes": 10058
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/source_context_pb2.py",
+        "path_type": "hardlink",
+        "sha256": "dee5967fe4d5fbcb7b7209fa6c16c2aebcc4776a0d30fde64870220432badd7d",
+        "sha256_in_prefix": "dee5967fe4d5fbcb7b7209fa6c16c2aebcc4776a0d30fde64870220432badd7d",
+        "size_in_bytes": 1791
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/struct_pb2.py",
+        "path_type": "hardlink",
+        "sha256": "b0a4fb7e9f53081d2f73cf7fc041e13cdefd4a720b7ed521d12d922fa6e59899",
+        "sha256_in_prefix": "b0a4fb7e9f53081d2f73cf7fc041e13cdefd4a720b7ed521d12d922fa6e59899",
+        "size_in_bytes": 3061
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/symbol_database.py",
+        "path_type": "hardlink",
+        "sha256": "aee2abb6b92ec6615eeeecdb246320383ec3e90b3683a8c52110b7692f4d36f5",
+        "sha256_in_prefix": "aee2abb6b92ec6615eeeecdb246320383ec3e90b3683a8c52110b7692f4d36f5",
+        "size_in_bytes": 6709
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/testdata/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/testdata/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "8d260ef5de0d00c2c5af596beb5fffcf89df2c72d988eb77fcce37840b7f6a46",
+        "sha256_in_prefix": "8d260ef5de0d00c2c5af596beb5fffcf89df2c72d988eb77fcce37840b7f6a46",
+        "size_in_bytes": 155
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/text_encoding.py",
+        "path_type": "hardlink",
+        "sha256": "028d50e8e3fc8b8a7c543b6fa5ef2e5b50635fb69066f909820be115862b07bc",
+        "sha256_in_prefix": "028d50e8e3fc8b8a7c543b6fa5ef2e5b50635fb69066f909820be115862b07bc",
+        "size_in_bytes": 3621
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/text_format.py",
+        "path_type": "hardlink",
+        "sha256": "70f53734c1eeb789b98e6a70ea1f04e34ceba3738d6e173f7af0c9c62c6116e0",
+        "sha256_in_prefix": "70f53734c1eeb789b98e6a70ea1f04e34ceba3738d6e173f7af0c9c62c6116e0",
+        "size_in_bytes": 63478
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/timestamp_pb2.py",
+        "path_type": "hardlink",
+        "sha256": "108e8c16b29a6f0739264aa62380b6810ab235a9ee9f0eda898d3a2150291222",
+        "sha256_in_prefix": "108e8c16b29a6f0739264aa62380b6810ab235a9ee9f0eda898d3a2150291222",
+        "size_in_bytes": 1815
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/type_pb2.py",
+        "path_type": "hardlink",
+        "sha256": "bf651924891ebbec4d0a42103d18a679c94e647528dbb0a0a2c402dce8f43220",
+        "sha256_in_prefix": "bf651924891ebbec4d0a42103d18a679c94e647528dbb0a0a2c402dce8f43220",
+        "size_in_bytes": 5438
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/unknown_fields.py",
+        "path_type": "hardlink",
+        "sha256": "455303c7289970e6db6f8d1d30afb15c202f739a64c8b3522f5cb6ab33c051b0",
+        "sha256_in_prefix": "455303c7289970e6db6f8d1d30afb15c202f739a64c8b3522f5cb6ab33c051b0",
+        "size_in_bytes": 3127
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/util/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/util/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "hardlink",
+        "sha256": "4da88ac7b7de6e2498bcf44568650854c329d4d504e0438b53250be7aa47eecd",
+        "sha256_in_prefix": "4da88ac7b7de6e2498bcf44568650854c329d4d504e0438b53250be7aa47eecd",
+        "size_in_bytes": 151
+      },
+      {
+        "_path": "lib/python3.9/site-packages/google/protobuf/wrappers_pb2.py",
+        "path_type": "hardlink",
+        "sha256": "3277deada15f3160693c739e39e1b5b93a8f7aac981323cc3025982681a79ad8",
+        "sha256_in_prefix": "3277deada15f3160693c739e39e1b5b93a8f7aac981323cc3025982681a79ad8",
+        "size_in_bytes": 3037
+      },
+      {
+        "_path": "lib/python3.9/site-packages/protobuf-5.28.3.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.9/site-packages/protobuf-5.28.3.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d",
+        "sha256_in_prefix": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d",
+        "size_in_bytes": 1732
+      },
+      {
+        "_path": "lib/python3.9/site-packages/protobuf-5.28.3.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "5dd0b6c0968045ad4057bee32355dc86ce72c633368b51d4918efcdfb6ab5575",
+        "sha256_in_prefix": "5dd0b6c0968045ad4057bee32355dc86ce72c633368b51d4918efcdfb6ab5575",
+        "size_in_bytes": 592
+      },
+      {
+        "_path": "lib/python3.9/site-packages/protobuf-5.28.3.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "b3f0358575d4c0b40d36e6a1c6a270957538c5e07fb9dc3e676eab97db02c4ea",
+        "sha256_in_prefix": "b3f0358575d4c0b40d36e6a1c6a270957538c5e07fb9dc3e676eab97db02c4ea",
+        "size_in_bytes": 8756
+      },
+      {
+        "_path": "lib/python3.9/site-packages/protobuf-5.28.3.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.9/site-packages/protobuf-5.28.3.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "1016a63649a927794febc54566b7f517ef6178f55e570016994ccbf321aed8ac",
+        "sha256_in_prefix": "1016a63649a927794febc54566b7f517ef6178f55e570016994ccbf321aed8ac",
+        "size_in_bytes": 107
+      },
+      {
+        "_path": "lib/python3.9/site-packages/protobuf-5.28.3.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "27d85b762e9ba3ea167ad9a2e899d0ca81c4701f496051b12662bbc72a04829e",
+        "sha256_in_prefix": "27d85b762e9ba3ea167ad9a2e899d0ca81c4701f496051b12662bbc72a04829e",
+        "size_in_bytes": 341
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "d43d614d655ca566c8d7ded391a16da2a30367ef62f4684cb6e9d6cf4b7c5d66",
+  "size": 374175,
+  "subdir": "osx-arm64",
+  "timestamp": 1731367101962,
+  "url": "https://conda.anaconda.org/conda-forge/osx-arm64/protobuf-5.28.3-py39h941272d_0.conda",
+  "version": "5.28.3"
+}

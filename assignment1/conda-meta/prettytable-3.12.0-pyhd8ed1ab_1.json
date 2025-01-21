@@ -1,0 +1,155 @@
+{
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [
+    "ptable >=9999"
+  ],
+  "depends": [
+    "python >=3.9",
+    "wcwidth"
+  ],
+  "extracted_package_dir": "/opt/anaconda3/pkgs/prettytable-3.12.0-pyhd8ed1ab_1",
+  "files": [
+    "lib/python3.9/site-packages/prettytable-3.12.0.dist-info/INSTALLER",
+    "lib/python3.9/site-packages/prettytable-3.12.0.dist-info/METADATA",
+    "lib/python3.9/site-packages/prettytable-3.12.0.dist-info/RECORD",
+    "lib/python3.9/site-packages/prettytable-3.12.0.dist-info/REQUESTED",
+    "lib/python3.9/site-packages/prettytable-3.12.0.dist-info/WHEEL",
+    "lib/python3.9/site-packages/prettytable-3.12.0.dist-info/direct_url.json",
+    "lib/python3.9/site-packages/prettytable-3.12.0.dist-info/licenses/LICENSE",
+    "lib/python3.9/site-packages/prettytable/__init__.py",
+    "lib/python3.9/site-packages/prettytable/_version.py",
+    "lib/python3.9/site-packages/prettytable/colortable.py",
+    "lib/python3.9/site-packages/prettytable/prettytable.py",
+    "lib/python3.9/site-packages/prettytable/py.typed",
+    "lib/python3.9/site-packages/prettytable/__pycache__/__init__.cpython-39.pyc",
+    "lib/python3.9/site-packages/prettytable/__pycache__/_version.cpython-39.pyc",
+    "lib/python3.9/site-packages/prettytable/__pycache__/colortable.cpython-39.pyc",
+    "lib/python3.9/site-packages/prettytable/__pycache__/prettytable.cpython-39.pyc"
+  ],
+  "fn": "prettytable-3.12.0-pyhd8ed1ab_1.conda",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "link": {
+    "source": "/opt/anaconda3/pkgs/prettytable-3.12.0-pyhd8ed1ab_1",
+    "type": 1
+  },
+  "md5": "f2445687715bc744d644e3739deb3559",
+  "name": "prettytable",
+  "noarch": "python",
+  "package_tarball_full_path": "/opt/anaconda3/pkgs/prettytable-3.12.0-pyhd8ed1ab_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/prettytable-3.12.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/prettytable-3.12.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "0dad8f4ac2c160f82d6f5c9ff293717683ce451330f13e135963ab76643d6b2f",
+        "sha256_in_prefix": "0dad8f4ac2c160f82d6f5c9ff293717683ce451330f13e135963ab76643d6b2f",
+        "size_in_bytes": 30599
+      },
+      {
+        "_path": "site-packages/prettytable-3.12.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "aea386e5b83154baed6d7e6b2f1ed3536054c1637ef485b07c4631446e4a039f",
+        "sha256_in_prefix": "aea386e5b83154baed6d7e6b2f1ed3536054c1637ef485b07c4631446e4a039f",
+        "size_in_bytes": 1229
+      },
+      {
+        "_path": "site-packages/prettytable-3.12.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/prettytable-3.12.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "0b615483066088b6f39d1fa4d1bff9937022ff568048e5c3b2cde5cc252c52e8",
+        "sha256_in_prefix": "0b615483066088b6f39d1fa4d1bff9937022ff568048e5c3b2cde5cc252c52e8",
+        "size_in_bytes": 87
+      },
+      {
+        "_path": "site-packages/prettytable-3.12.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "8e92cd32773fa6020dd4bcd866179e968e8f2c440d6d81dbd9f5e114662a77fc",
+        "sha256_in_prefix": "8e92cd32773fa6020dd4bcd866179e968e8f2c440d6d81dbd9f5e114662a77fc",
+        "size_in_bytes": 107
+      },
+      {
+        "_path": "site-packages/prettytable-3.12.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "0c8adcc204c8af6cdfdf7887dfd1f99c29901f6c1d505a78bba96efa4fb2cb05",
+        "sha256_in_prefix": "0c8adcc204c8af6cdfdf7887dfd1f99c29901f6c1d505a78bba96efa4fb2cb05",
+        "size_in_bytes": 1612
+      },
+      {
+        "_path": "site-packages/prettytable/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c0d4e69b8cb4e2b0467f694ab11c9d8d5ce690406bb68773a0a7fd01e031ef88",
+        "sha256_in_prefix": "c0d4e69b8cb4e2b0467f694ab11c9d8d5ce690406bb68773a0a7fd01e031ef88",
+        "size_in_bytes": 1184
+      },
+      {
+        "_path": "site-packages/prettytable/_version.py",
+        "path_type": "hardlink",
+        "sha256": "ea253ded93631725a8e72eb5d8758fbeae110001c68e6ccd74dacd3dd0f509e3",
+        "sha256_in_prefix": "ea253ded93631725a8e72eb5d8758fbeae110001c68e6ccd74dacd3dd0f509e3",
+        "size_in_bytes": 413
+      },
+      {
+        "_path": "site-packages/prettytable/colortable.py",
+        "path_type": "hardlink",
+        "sha256": "881a31b8288bc3efffe068303b898442e3f19cc30e9fa508dbd952a277b70681",
+        "sha256_in_prefix": "881a31b8288bc3efffe068303b898442e3f19cc30e9fa508dbd952a277b70681",
+        "size_in_bytes": 3589
+      },
+      {
+        "_path": "site-packages/prettytable/prettytable.py",
+        "path_type": "hardlink",
+        "sha256": "b7866933980ab7357f9329ab8cd163011747510548eb1117c7bbf3048481fe9f",
+        "sha256_in_prefix": "b7866933980ab7357f9329ab8cd163011747510548eb1117c7bbf3048481fe9f",
+        "size_in_bytes": 102895
+      },
+      {
+        "_path": "site-packages/prettytable/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.9/site-packages/prettytable/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/prettytable/__pycache__/_version.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/prettytable/__pycache__/colortable.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.9/site-packages/prettytable/__pycache__/prettytable.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "ccd1109275fcde64882a647264d79a9976429ae57f82692ba6836635cf38ad87",
+  "size": 32660,
+  "subdir": "noarch",
+  "timestamp": 1733864056078,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/prettytable-3.12.0-pyhd8ed1ab_1.conda",
+  "version": "3.12.0"
+}
