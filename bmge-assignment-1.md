@@ -682,7 +682,8 @@ plotChromBins(x)
 ```
 
 <figure>
-<img src="assignment1/pipeline/Chr1_VariantsvsPos.svg"
+<img
+src="assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/Chr1_VariantsvsPos.svg"
 alt="Chr1_VariantsvsPos" />
 <figcaption aria-hidden="true">Chr1_VariantsvsPos</figcaption>
 </figure>
