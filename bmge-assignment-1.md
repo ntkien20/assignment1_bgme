@@ -22,6 +22,7 @@ BMEG 424 Assignment 1
   - [Per base N Level](#per-base-n-level)
   - [Per base sequencing content](#per-base-sequencing-content)
   - [Per sequence gc content](#per-sequence-gc-content)
+  - [Per Sequence Quality Scores](#per-sequence-quality-scores)
   - [Per Tile Quality](#per-tile-quality)
   - [Sequence Length Distribution](#sequence-length-distribution)
   - [Duplication Level](#duplication-level)
@@ -289,7 +290,8 @@ view the dependency map by typing `eog dag.svg` into the command line.
 ```
 
 <figure>
-<img src="/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/dag.svg"
+<img
+src="/Users/ntkien20/Desktop/BMEG/assignment1_bgme/assignment1/pipeline/dag.svg"
 alt="Dependency Map" />
 <figcaption aria-hidden="true">Dependency Map</figcaption>
 </figure>
@@ -325,15 +327,15 @@ dependency map.
 
 \##Adapter Quality
 
-![Adapter
-Quality](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/adapter_content.png)
+/Users/ntkien20/Desktop/BMEG/assignment1_bgme/assignment1 ![Adapter
+Quality](/Users/ntkien20/Desktop/BMEG/assignment1_bgme/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/adapter_content.png)
 This graph shows the percentage of reads containing adapter sequences
 across different positions in the read
 
 ## Per Base Sequence Quality
 
 ![Per Base
-Quality](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_base_quality.png)
+Quality](/Users/ntkien20/Desktop/BMEG/assignment1_bgme/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_base_quality.png)
 This graph shows the Phred quality score distribution for each base
 position in the read. Overall, the majority of reads are in the green
 zone, which means they have good quality.
@@ -341,43 +343,50 @@ zone, which means they have good quality.
 ## Per base N Level
 
 ![Per Base N
-Level](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_base_n_content.png)
+Level](/Users/ntkien20/Desktop/BMEG/assignment1_bgme/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_base_n_content.png)
 This graph shows the percentage of the N bases. The graph shows a low
 and consistent N content across all positions, suggesting good quality
 
 ## Per base sequencing content
 
 ![Per Base sequence
-content](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_base_sequence_content.png)
+content](/Users/ntkien20/Desktop/BMEG/assignment1_bgme/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_base_sequence_content.png)
 This graph shows the proportion of each of the four nucleotide (A, T, G,
 C) in the read. The sequencing content is uniform across all read.
 
 ## Per sequence gc content
 
-![Per sequence gc
-content](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_sequence_gc_content.png)
-\## Per Sequence Quality Scores ![Per Sequence Quality
-Scores](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_sequence_quality.png)
+<figure>
+<img
+src="/Users/ntkien20/Desktop/BMEG/assignment1_bgme/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_sequence_gc_content.png"
+alt="Per sequence gc content" />
+<figcaption aria-hidden="true">Per sequence gc content</figcaption>
+</figure>
+
+## Per Sequence Quality Scores
+
+![Per Sequence Quality
+Scores](/Users/ntkien20/Desktop/BMEG/assignment1_bgme/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_sequence_quality.png)
 This graph shows the GC content distribution of the reads. The data
 passes for GC content in all reads.
 
 ## Per Tile Quality
 
 ![Per Tile
-Quality](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_tile_quality.png)
+Quality](/Users/ntkien20/Desktop/BMEG/assignment1_bgme/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_tile_quality.png)
 This graph shows base-calling quality scores, and it shows universal
 quality across.
 
 ## Sequence Length Distribution
 
 ![Sequence Length
-Distribution](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/sequence_length_distribution.png)
+Distribution](/Users/ntkien20/Desktop/BMEG/assignment1_bgme/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/sequence_length_distribution.png)
 This graph shows the read lengths in the sequencing data.
 
 ## Duplication Level
 
 ![Duplication
-Level](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/duplication_levels.png)
+Level](/Users/ntkien20/Desktop/BMEG/assignment1_bgme/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/duplication_levels.png)
 This graph shows the proportion of duplicated sequences. The results are
 within acceptable limit
 
@@ -509,7 +518,7 @@ count_SNPs <- function(file_path) {
 SNPs as a bar plot (1 pts)
 
 ``` r
-file_path <- "/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/variants/subset_SRR099957.vcf"
+file_path <- "/Users/ntkien20/Desktop/BMEG/assignment1_bgme/assignment1/pipeline/variants/subset_SRR099957.vcf"
 snp_count <- count_SNPs(file_path)
 
 library(ggplot2)
@@ -661,7 +670,7 @@ library(VariantAnnotation)
     ##     tabulate
 
 ``` r
-vcf_file <- "/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/variants/subset_SRR099957.vcf"
+vcf_file <- "/Users/ntkien20/Desktop/BMEG/assignment1_bgme/assignment1/pipeline/variants/subset_SRR099957.vcf"
 vcf_data <- readVcf(vcf_file, "hg19")
 gr_sample <- rowRanges(vcf_data)
 x <- calcChromBinsRef(gr_sample, "hg19")
