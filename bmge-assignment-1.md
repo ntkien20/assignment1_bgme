@@ -18,6 +18,13 @@ BMEG 424 Assignment 1
     - [Part 2: Quality Control](#part-2-quality-control)
       - [a. Quality Control of raw sequencing
         data](#a-quality-control-of-raw-sequencing-data)
+  - [Per Base Sequence Quality](#per-base-sequence-quality)
+  - [Per base N Level](#per-base-n-level)
+  - [Per base sequencing content](#per-base-sequencing-content)
+  - [Per sequence gc content](#per-sequence-gc-content)
+  - [Per Tile Quality](#per-tile-quality)
+  - [Sequence Length Distribution](#sequence-length-distribution)
+  - [Duplication Level](#duplication-level)
     - [b. Quality control of the
       alignment](#b-quality-control-of-the-alignment)
     - [Part 3: Visualization and Downstream
@@ -203,13 +210,12 @@ the raw sequencing data (fastqc)
 It is up to you to implement the remaining steps:
 
     #?# 1. Fill in the rest of the Snakefile to include rules for sorting the aligned data, indexing the sorted data, and calling variants. (5 pts)
-
-
-    configfile: "config.yaml" # This is located with the data files, you'll need to move it into the same directory as your Snakefile 
+    configfile: "config.yaml"
 
     rule all:
         input:
-            expand("fastqc/{sample}_fastqc.html", sample=config['samples']),
+            expand("fastqc/{sample}_1_fastqc.html", sample=config['samples']),
+            expand("fastqc/{sample}_2_fastqc.html", sample=config['samples']),
             expand("aligned/{sample}.sam", sample=config['samples']),
             expand("sorted/{sample}.bam", sample=config['samples']),
             expand("sorted/{sample}.bam.bai", sample=config['samples']),
@@ -217,44 +223,52 @@ It is up to you to implement the remaining steps:
 
     rule fastqc:
         input:
-            "/path/to/data/{sample}_1.fastq.gz",
-            "/path/to/data/{sample}_2.fastq.gz"
+            "/Users/ntkien20/Desktop/BMEG/assignment1/{sample}_1.fastq.gz",
+            "/Users/ntkien20/Desktop/BMEG/assignment1/{sample}_2.fastq.gz"
         output:
-            "fastqc/{sample}_fastqc.html"
+            "fastqc/{sample}_1_fastqc.html",
+            "fastqc/{sample}_2_fastqc.html"
         shell:
             "fastqc {input} --outdir fastqc"
 
     rule align:
         input:
-            fastq1 = "/path/to/data/{sample}_1.fastq.gz",
-            fastq2 = "/path/to/data/{sample}_2.fastq.gz",
+            "/Users/ntkien20/Desktop/BMEG/assignment1/{sample}_1.fastq.gz",
+            "/Users/ntkien20/Desktop/BMEG/assignment1/{sample}_2.fastq.gz"
         output:
-            sam = "aligned/{sample}.sam"
+            "aligned/{sample}.sam"
         shell:
-            "bowtie2 -x /projects/bmeg/indexes/hg38/hg38_bowtie2_index -1 {input.fastq1} -2 {input.fastq2} -S {output.sam}"
+            "bowtie2 -x /Users/ntkien20/Desktop/BMEG/assignment1/hg38/hg38_bowtie2_index "
+            "-1 {input[0]} -2 {input[1]} -S {output}"
 
     rule samtools_sort:
         input:
+            "aligned/{sample}.sam"
         output:
+            "sorted/{sample}.bam"
         shell:
-
+            "samtools sort -T sorted/{wildcards.sample} -O bam {input} > {output}"
 
     rule samtools_index:
         input:
+            "sorted/{sample}.bam"
         output:
+            "sorted/{sample}.bam.bai"
         shell:
+            "samtools index {input}"
 
-
-    # For this rule we've provided the command as it's a little more complicated, and we haven't covered variant calling in the course material. Everything above should be pretty simple to implement if you take a look at the relevant documentations.
     rule bcftools_call:
         input:
-            genome="/projects/bmeg/indexes/hg38/hg38.fa",
-            bam=,
-            bai=
+            genome="/Users/ntkien20/Desktop/BMEG/assignment1/hg38/hg38.fa",
+            bam="sorted/{sample}.bam",
+            bai="sorted/{sample}.bam.bai"
         output:
+            "variants/{sample}.vcf"
         shell:
-            "samtools mpileup -uf {input.genome} {input} | "
-            "bcftools call -Ov -o {output}"
+            "bcftools mpileup -f {input.genome} {input.bam} | "
+            "bcftools call -mv -Ov -o {output}"
+
+    ChatGPT was used here. However, since I couldn't export the chat, I attached a word document of the entire conversation onto Canvas. I first wrote the pipeline code and had ChatGPT looked over it for me. I was particularly stuck on the bcftools_call, since the example on the main website didn't help.
 
 Before you start running your snakefile you will need to make sure it is
 set up correctly. You can type `snakemake -np` into the command line to
@@ -270,16 +284,19 @@ view the dependency map by typing `eog dag.svg` into the command line.
 
 ``` bash
 #?# 2. Include the dependency map of your Snakefile below using Rmarkdown syntax (1 pts)
-# The correct Rmarkdown syntax is ![NameOfImg](path/to/dag.svg) 
+
+# The correct Rmarkdown syntax is ![Dependency Map](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/dag.svg)
 ```
 
 <figure>
-<img src="dag.svg" alt="dag" />
-<figcaption aria-hidden="true">dag</figcaption>
+<img src="/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/dag.svg"
+alt="Dependency Map" />
+<figcaption aria-hidden="true">Dependency Map</figcaption>
 </figure>
 
 ``` bash
 #?# 3. Explain what the dependency map is showing and whether or not you think it is correct. (1 pts)
+I think the dependency map is showing the workflow of the pipeline.
 ```
 
 Run your pipeline on the sequence data provided. You can do this by
@@ -306,12 +323,63 @@ dependency map.
     #?# 5. Include the fastqc graphs from the QC on the forward read (read 1) file in your Rmarkdown file below this block. For each graph include a brief description of what the graph is showing and whether or not you think the data passed the quality control. (5 pts) 
     # Please try to separate your descriptions by including an text block between for description. 
 
-<figure>
-<img src="fastqc_1_1.png" alt="FirstGraph" />
-<figcaption aria-hidden="true">FirstGraph</figcaption>
-</figure>
+\##Adapter Quality
 
-    Description for graph 1
+![Adapter
+Quality](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/adapter_content.png)
+This graph shows the percentage of reads containing adapter sequences
+across different positions in the read
+
+## Per Base Sequence Quality
+
+![Per Base
+Quality](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_base_quality.png)
+This graph shows the Phred quality score distribution for each base
+position in the read. Overall, the majority of reads are in the green
+zone, which means they have good quality.
+
+## Per base N Level
+
+![Per Base N
+Level](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_base_n_content.png)
+This graph shows the percentage of the N bases. The graph shows a low
+and consistent N content across all positions, suggesting good quality
+
+## Per base sequencing content
+
+![Per Base sequence
+content](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_base_sequence_content.png)
+This graph shows the proportion of each of the four nucleotide (A, T, G,
+C) in the read. The sequencing content is uniform across all read.
+
+## Per sequence gc content
+
+![Per sequence gc
+content](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_sequence_gc_content.png)
+\## Per Sequence Quality Scores ![Per Sequence Quality
+Scores](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_sequence_quality.png)
+This graph shows the GC content distribution of the reads. The data
+passes for GC content in all reads.
+
+## Per Tile Quality
+
+![Per Tile
+Quality](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/per_tile_quality.png)
+This graph shows base-calling quality scores, and it shows universal
+quality across.
+
+## Sequence Length Distribution
+
+![Sequence Length
+Distribution](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/sequence_length_distribution.png)
+This graph shows the read lengths in the sequencing data.
+
+## Duplication Level
+
+![Duplication
+Level](/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/fastqc/subset_SRR099957_1_fastqc/Images/duplication_levels.png)
+This graph shows the proportion of duplicated sequences. The results are
+within acceptable limit
 
 …
 
@@ -321,6 +389,25 @@ For this section we will be using samtools to check the alignment of our
 data.
 
     #?# 6. Use samtools flagstat to check the alignment rate of the sample you ran. Paste the output below (0.5 pts) and explain what the output means (1.5 pts)
+
+    1000000 + 0 in total (QC-passed reads + QC-failed reads)
+    1000000 + 0 primary
+    0 + 0 secondary
+    0 + 0 supplementary
+    0 + 0 duplicates
+    0 + 0 primary duplicates
+    924585 + 0 mapped (92.46% : N/A)
+    924585 + 0 primary mapped (92.46% : N/A)
+    1000000 + 0 paired in sequencing
+    500000 + 0 read1
+    500000 + 0 read2
+    898442 + 0 properly paired (89.84% : N/A)
+    914236 + 0 with itself and mate mapped
+    10349 + 0 singletons (1.03% : N/A)
+    3180 + 0 with mate mapped to a different chr
+    1857 + 0 with mate mapped to a different chr (mapQ>=5)
+
+    There were 1,000,000 reads in total, all of them being primary reads with no secondary, no supplementary, no duplicatres, and no primary duplicates. 92.46% were mapped to the reference genome hg38. There were an equal amount of forward and reverse read. Within these reads, 89.84% were properly paired, and 91.42% of the reads were mapped. The number of mate mapped to a different chromosome were fairly low, indicating that the reads were of good quality.
 
 ### Part 3: Visualization and Downstream Analysis
 
@@ -395,31 +482,54 @@ function (2 pts) and add comments to explain what each line of code is
 doing (1 pts).
 
 ``` r
-# NOTE: Delete all the #'s in this block to uncomment the code 
-# count_SNPs <- function(file_path) {
-#     vcf_data <- read.table(file_path, header = FALSE, stringsAsFactors = FALSE)
-#     header_names <- unlist(strsplit(header_line, "\t"))
+count_SNPs <- function(file_path) {
+  vcf_data <- read.table(file_path, header = FALSE, stringsAsFactors = FALSE) #This line reads the vcf file from the file path and saves it to vcf_data
+  header_line <- grep("^#CHROM", readLines(file_path), value = TRUE) #This line fixes the first bug. It is needed because the subsequent line has header_line, which is not defined. It reads the line from the vcf file and searches for the "^#CHROM" pattern and returns the entire line
+  header_names <- unlist(strsplit(header_line, "\t")) #This line will split the header_lines into substrings that begins with the tab characeter "\t"
+  colnames(vcf_data) <- header_names #This line will assign header_lines as the column name for the vcf dataframe
 
-#     ref_alt_data <- vcf_data[c("REF", "ALT")]
-#     ref_alt_data <- ref_alt_data[apply(ref_alt_data, 1, function(x) all(nchar(x) == 1)), ]
+  ref_alt_data <- vcf_data[, c("REF", "ALT")] #This line selects only the reference and alternate allele columns from the vcf data frame
+  ref_alt_data <- ref_alt_data[apply(ref_alt_data, 1, function(x) all(nchar(x) == 1)), ] #This line checks for rows with only 1 character for single nucleotide polymorphism
 
-#     counts <- table(ref_alt_data$REF, ref_alt_data$ALT)
+  counts <- table(ref_alt_data$REF, ref_alt_data$ALT) #This line makes a table that counts whenever there is a pair of REF and ALT
 
-#     result_df <- data.frame(
-#         REF = rep(rownames(counts), each = ncol(counts)),
-#         ALT = rep(colnames(counts), times = nrow(counts)),
-#         COUNT = as.vector(counts)
-#     )
+  result_df <- data.frame(
+      REF = rep(rownames(counts), each = ncol(counts)),
+      ALT = rep(colnames(counts), times = nrow(counts)),
+      COUNT = as.vector(counts)
+  ) #This makes the table into a dataframe
 
-#     return(result_df)
-# }
+  return(result_df)
+}
+
+##This was done with the help of ChatGPT. The link to the chat is here https://chatgpt.com/share/678f4c33-e664-8005-afa9-54b7746adb34. ChatGPT was used to help visualize a VCF format, as well as identifying the bugs. I then examined the lines that ChatGPT suggested and studied them. 
 ```
 
 \#?# 8. Use the returned data frame to plot the ref-alt pairs for all
 SNPs as a bar plot (1 pts)
 
 ``` r
-# Include the code you used to generate the plot in this block. When you knit your document the plot will be generated and displayed below.
+file_path <- "/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/variants/subset_SRR099957.vcf"
+snp_count <- count_SNPs(file_path)
+
+library(ggplot2)
+snp_graph <- ggplot(snp_count, aes(x = interaction(REF, ALT), y = COUNT)) +
+  geom_bar(stat = "identity", fill = "pink") +
+  labs(
+    title = "Number of REF-ALT pairs for all SNPs",
+    x = "REF-ALT Pair",
+    y = "Count"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  theme_minimal()
+
+print(snp_graph)
+```
+
+![](bmge-assignment-1_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
+``` r
+##This was done with the help of ChatGPT. The link to the chat is here https://chatgpt.com/share/678f4c33-e664-8005-afa9-54b7746adb34. ChatGPT was used to help visualize the ggplot code nedded. 
 ```
 
 \#?# 9. Included in the assignment repo is a plot which shows the
@@ -477,10 +587,96 @@ library(GenomicRanges)
 
 ``` r
 library(GenomicDistributions)
+library(VariantAnnotation)
+```
+
+    ## Loading required package: MatrixGenerics
+
+    ## Warning: package 'MatrixGenerics' was built under R version 4.4.2
+
+    ## Loading required package: matrixStats
+
+    ## 
+    ## Attaching package: 'MatrixGenerics'
+
+    ## The following objects are masked from 'package:matrixStats':
+    ## 
+    ##     colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    ##     colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    ##     colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    ##     colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    ##     colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    ##     colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    ##     colWeightedMeans, colWeightedMedians, colWeightedSds,
+    ##     colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    ##     rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    ##     rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    ##     rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    ##     rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    ##     rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    ##     rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    ##     rowWeightedSds, rowWeightedVars
+
+    ## Loading required package: SummarizedExperiment
+
+    ## Loading required package: Biobase
+
+    ## Welcome to Bioconductor
+    ## 
+    ##     Vignettes contain introductory material; view with
+    ##     'browseVignettes()'. To cite Bioconductor, see
+    ##     'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+    ## 
+    ## Attaching package: 'Biobase'
+
+    ## The following object is masked from 'package:MatrixGenerics':
+    ## 
+    ##     rowMedians
+
+    ## The following objects are masked from 'package:matrixStats':
+    ## 
+    ##     anyMissing, rowMedians
+
+    ## Loading required package: Rsamtools
+
+    ## Loading required package: Biostrings
+
+    ## Warning: package 'Biostrings' was built under R version 4.4.2
+
+    ## Loading required package: XVector
+
+    ## 
+    ## Attaching package: 'Biostrings'
+
+    ## The following object is masked from 'package:base':
+    ## 
+    ##     strsplit
+
+    ## 
+    ## Attaching package: 'VariantAnnotation'
+
+    ## The following object is masked from 'package:base':
+    ## 
+    ##     tabulate
+
+``` r
+vcf_file <- "/Users/ntkien20/Desktop/BMEG/assignment1/pipeline/variants/subset_SRR099957.vcf"
+vcf_data <- readVcf(vcf_file, "hg19")
+gr_sample <- rowRanges(vcf_data)
+x <- calcChromBinsRef(gr_sample, "hg19")
+plotChromBins(x)
+```
+
+![](bmge-assignment-1_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+
+``` r
+##This was done with the help of ChatGPT. The link to the chat is here https://chatgpt.com/share/678f4c33-e664-8005-afa9-54b7746adb34. ChatGPT was used to help me get started on the GenomicRanges and GenomicDistributions package. Following the code suggestion, I looked online for the rowRanges() function for genomic range, and I came across this guide https://www.bioconductor.org/packages/release/workflows/vignettes/annotation/inst/doc/Annotating_Genomic_Ranges.html, which helped me understand the concept behind the code. 
 ```
 
 <figure>
-<img src="Chr1_VariantsvsPos.svg" alt="Chr1_VariantsvsPos" />
+<img src="/Users/ntkien20/Downloads/Chr1_VariantsvsPos.svg"
+alt="Chr1_VariantsvsPos" />
 <figcaption aria-hidden="true">Chr1_VariantsvsPos</figcaption>
 </figure>
 
@@ -498,21 +694,36 @@ file. Zoom into this position: `chr1: 1,000,000-1,100,000`.
 
     #?# 10. Post a screenshot of your IGV window below (1pts)
 
+<figure>
+<img
+src="/Users/ntkien20/Desktop/Screenshot%202025-01-20%20at%2017.54.01.png"
+alt="Screenshot" />
+<figcaption aria-hidden="true">Screenshot</figcaption>
+</figure>
+
 ## Discussion (6 pts)
 
 \#?# 11. Do you think the subset of sequence data you analyzed was from
 Whole Genome Sequencing or Whole Exome Sequencing? Justify your response
 with evidence. (4 pts)
 
+This might be Whole Exome Sequencing. In Whole Genome Sequencing, the
+peak are more unified, as there will be variants in all regions.
+However, in whole exome sequencing, the variants are only detected in
+region of coding genes, which means that there will be more clustered
+peaks.
+
 Assuming your snakemake run was supposed to process 1000 samples instead
 of 1 sample.
 
 ``` bash
 #?# 12. How would you go about checking the quality of all the samples? (1 pts)
+#I would update the yaml file to include 1000 samples
 ```
 
 ``` bash
 #?# 13. If the run crashed on sample 500, how would you go about restarting the run? (1 pts)
+#I think we can restart snakemake for that?
 ```
 
 # Contributions
